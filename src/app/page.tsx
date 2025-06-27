@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import HeroSection from "@/components/Herosection";
 import Navbar from '../components/Navbar';
-import MarketingServices from "@/components/WhoWeHelp";
-import ServicesOffered from "@/components/ServicesOffered";
-import FeaturedIn from "@/components/AboutUs";
-import OurTeam from "@/components/OurTeam";
+import MarketingServices from "@/components/MarketingServices";
+import CaseStudies from "@/components/CaseStudies";
+import FeaturedIn from "@/components/FeaturedIn";
+import MarketingDepartmentSection from "@/components/MarketingDepartment";
 import ScheduleMeeting from "@/components/ScheduleMeeting";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -19,9 +19,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <FeaturedIn />
-              <MarketingServices />
-      <ServicesOffered />
-      <OurTeam />
+      <MarketingServices />
+      <CaseStudies />
+      <MarketingDepartmentSection />
       <ScheduleMeeting />
       <FAQ />
       <Footer />
