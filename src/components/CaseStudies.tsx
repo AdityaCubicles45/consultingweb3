@@ -41,10 +41,10 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <div className="bg-black text-white px-6 py-12 md:px-20">
+    <div className="section-bg-gradient text-white px-6 py-12 md:px-20 relative z-10">
       <h2 className="text-center text-3xl md:text-4xl font-semibold">
         Follow the{" "}
-        <span className="bg-gradient-to-r from-[#FF6A5F] via-[#FF5BBE] to-[#A63FFD] bg-clip-text text-transparent font-bold">
+        <span className="gradient-text font-bold">
           top worldwide brands
         </span>
       </h2>
@@ -53,25 +53,25 @@ export default function CaseStudies() {
         {cases.map((item, i) => (
           <div
             key={i}
-            className="bg-[#141416] rounded-xl p-6 border border-[#2E2E2E] flex flex-col min-h-[170px]"
+            className="glass-card p-8 flex flex-col min-h-[220px]"
           >
-            <span className="text-[8px] font-semibold bg-blue-800 text-white px-3 py-1 rounded w-fit mb-4 uppercase tracking-wider">
+            <span className="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded w-fit mb-6 uppercase tracking-wider">
               {item.tag}
             </span>
             
-            <h3 className="text-lg md:text-xl font-semibold leading-snug mb-auto">
+            <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-auto text-white">
               {item.title}
             </h3>
             
-            <div className="flex items-center justify-between mt-6">
-              <div className="flex items-center text-sm group">
-                <a href="#" className="bg-gradient-to-r from-[#FF6A5F] via-[#FF5BBE] to-[#A63FFD] bg-clip-text text-transparent font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-gradient-to-r after:from-[#FF6A5F] after:via-[#FF5BBE] after:to-[#A63FFD] group-hover:after:opacity-0 after:transition-opacity after:duration-300">
+            <div className="flex items-center justify-between mt-8">
+              <div className="flex items-center text-lg group">
+                <a href="#" className="gradient-text font-semibold relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-[#FF6A5F] after:via-[#FF5BBE] after:to-[#A63FFD] group-hover:after:opacity-0 after:transition-opacity after:duration-300">
                   Explore Case
                 </a>
-                <span className="bg-gradient-to-r from-[#FF6A5F] via-[#FF5BBE] to-[#A63FFD] bg-clip-text text-transparent text-xl ml-2 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                <span className="gradient-text text-3xl ml-3 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
               </div>
               <div className="flex justify-end">
-                <img src={item.logo} alt={item.company} className="h-5" />
+                <img src={item.logo} alt={item.company} className="h-8" />
               </div>
             </div>
           </div>
@@ -79,8 +79,8 @@ export default function CaseStudies() {
       </div>
 
       <div className="flex justify-center mt-12">
-        <button className="bg-gradient-to-r from-[#FF6A5F] to-[#A63FFD] hover:bg-gradient-to-l hover:from-[#FF6A5F] hover:to-[#A63FFD] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-          More cases
+        <button className="gradient-border px-8 py-3 text-white font-semibold transition-all duration-300 hover:scale-105">
+          <span className="relative z-10">More cases</span>
         </button>
       </div>
     </div>

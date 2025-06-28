@@ -1,72 +1,67 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-const FeaturedIn = () => {
+export default function FeaturedIn() {
   return (
-    <section className="w-full bg-[#0D0D0D] text-white py-24 px-6 md:px-16 lg:px-24 font-sans">
+    <section className="section-bg-gradient text-white py-24 px-6 md:px-16 lg:px-24 font-sans relative z-10">
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">We Are Featured In</h2>
-            <h1 className="text-[140px] font-bold leading-[1] text-[#7B7B7B] tracking-tight">Forbes</h1>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">We Are Featured In</h2>
+            <h1 className="text-[140px] font-bold leading-[1] text-white/20 tracking-tight">Forbes</h1>
           </div>
           <div className="max-w-[550px]">
-            <p className="text-[#A1A1AA] text-base md:text-lg mb-6">
-              Barbarika&apos;s founders shared insights with Forbes on the strategic advantages of partnering over contracting with service providers.
+            <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
+              Barbarika's founders shared insights with Forbes on the strategic advantages of partnering over contracting with service providers.
             </p>
-            <button className="border border-white text-white rounded-full px-6 py-3 text-sm font-medium hover:bg-white hover:text-black transition-all duration-300">
+            <button className="glass-card border border-white/20 text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-white/10 transition-all duration-300">
               Read the article
             </button>
           </div>
         </div>
 
         {/* Subheader */}
-        <h3 className="text-2xl font-semibold mt-24 mb-10">And other media</h3>
+        <h3 className="text-3xl md:text-4xl font-bold mt-24 mb-12 text-white">And other media</h3>
 
         {/* Media Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-[#1C1C1C] rounded-2xl p-6 min-h-[120px] text-sm">
-            <p className="text-white font-semibold mb-2">Analytics Insight</p>
-            <p className="text-[#A1A1AA]">
-              What Artificial Intelligence Can Bring to Digital Marketing in 2024
-            </p>
+          <div className="glass-card p-8 min-h-[140px]">
+            <p className="text-white font-bold text-lg mb-3">Analytics Insight</p>
+            <p className="text-white/80 text-base leading-relaxed">What Artificial Intelligence Can Bring to Digital Marketing in 2024</p>
           </div>
 
-          <div className="bg-[#1C1C1C] rounded-2xl p-6 min-h-[120px] text-sm">
-            <p className="text-white font-semibold mb-2">CoinPedia.</p>
-            <p className="text-[#A1A1AA]">
-              State of User Acquisition 2024 in Web3
-            </p>
+          <div className="glass-card p-8 min-h-[140px]">
+            <p className="text-white font-bold text-lg mb-3">CoinPedia.</p>
+            <p className="text-white/80 text-base leading-relaxed">State of User Acquisition 2024 in Web3</p>
           </div>
 
-          <div className="bg-[#1C1C1C] rounded-2xl p-6 min-h-[120px] text-sm">
-            <p className="text-white font-semibold mb-2">Cryptopolitan</p>
-            <p className="text-[#A1A1AA]">
-              What&apos;s Holding Up The Next Bull Run in 2024, and What Trends Will Fuel It
-            </p>
+          <div className="glass-card p-8 min-h-[140px]">
+            <p className="text-white font-bold text-lg mb-3">Cryptopolitan</p>
+            <p className="text-white/80 text-base leading-relaxed">What's Holding Up The Next Bull Run in 2024, and What Trends Will Fuel It</p>
           </div>
 
-          <div className="bg-[#1C1C1C] rounded-2xl p-6 min-h-[120px] text-sm">
-            <p className="text-white font-semibold mb-2">Bitcoin.com</p>
-            <p className="text-[#A1A1AA]">
-              Game-Changing Subscription Model for Marketing Services Unveiled by Barbarika.io
-            </p>
+          <div className="glass-card p-8 min-h-[140px]">
+            <p className="text-white font-bold text-lg mb-3">Bitcoin.com</p>
+            <p className="text-white/80 text-base leading-relaxed">Game-Changing Subscription Model for Marketing Services Unveiled by Barbarika.io</p>
           </div>
         </div>
 
         {/* Arrows */}
-        <div className="flex justify-end items-center gap-4 mt-10">
-          <button className="w-10 h-10 rounded-full bg-[#1C1C1C] flex items-center justify-center">
-            <ArrowLeft size={20} color="white" />
+        <div className="flex justify-end items-center gap-4 mt-12">
+          <button className="glass-card w-12 h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left" aria-hidden="true">
+              <path d="m12 19-7-7 7-7"></path>
+              <path d="M19 12H5"></path>
+            </svg>
           </button>
-          <button className="w-10 h-10 rounded-full bg-[#1C1C1C] flex items-center justify-center">
-            <ArrowRight size={20} color="white" />
+          <button className="glass-card w-12 h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
           </button>
         </div>
       </div>
     </section>
   );
-};
-
-export default FeaturedIn; 
+} 

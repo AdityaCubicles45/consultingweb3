@@ -4,7 +4,6 @@ import HeroSection from "@/components/Herosection";
 import Navbar from '../components/Navbar';
 import MarketingServices from "@/components/MarketingServices";
 import CaseStudies from "@/components/CaseStudies";
-import FeaturedIn from "@/components/FeaturedIn";
 import MarketingDepartmentSection from "@/components/MarketingDepartment";
 import ScheduleMeeting from "@/components/ScheduleMeeting";
 import FAQ from "@/components/FAQ";
@@ -15,10 +14,15 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main style={{ backgroundColor: '#F3F3F3', minHeight: '100vh' }}>
+    <main className="unified-bg">
+      {/* Flowing Background Elements */}
+      <div className="bg-flow-element bg-flow-1"></div>
+      <div className="bg-flow-element bg-flow-2"></div>
+      <div className="bg-flow-element bg-flow-3"></div>
+      <div className="bg-flow-element bg-flow-4"></div>
+      
       <Navbar />
       <HeroSection />
-      <FeaturedIn />
       <MarketingServices />
       <CaseStudies />
       <MarketingDepartmentSection />

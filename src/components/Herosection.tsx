@@ -2,13 +2,50 @@ import React from 'react';
 
 export default function HeroSection() {
   return (
-    <div className="relative bg-[#0B0C2A] text-white min-h-screen overflow-hidden font-sans">
-      {/* Glowing Background Effect */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#FF8BA7] via-[#7F5CFF] to-transparent opacity-60 blur-[100px]" />
-        <div className="absolute right-0 bottom-0 w-[400px] h-[300px] bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#00E0FF] via-[#D38EFF] to-transparent opacity-40 blur-[80px]" />
+    <div className="relative min-h-screen bg-gradient-to-b from-[#0a0d16] to-[#10131e] overflow-hidden text-white font-sans">
+      {/* SVG mesh overlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 1440 600"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
+          style={{ opacity: 0.7 }}
+        >
+          <defs>
+            <linearGradient id="meshLine" x1="0" y1="0" x2="1440" y2="600" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#00eaff" />
+              <stop offset="1" stopColor="#00bfff" />
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          {/* Example mesh lines */}
+          <polyline points="0,250 200,220 400,270 600,210 800,260 1000,230 1200,250 1440,220"
+            stroke="url(#meshLine)" strokeWidth="1.7" fill="none" filter="url(#glow)" />
+          <polyline points="0,400 200,350 400,420 600,300 800,380 1000,320 1200,400 1440,350"
+            stroke="url(#meshLine)" strokeWidth="2" fill="none" filter="url(#glow)" />
+          <polyline points="0,500 200,450 400,520 600,400 800,480 1000,420 1200,500 1440,450"
+            stroke="url(#meshLine)" strokeWidth="1.5" fill="none" filter="url(#glow)" />
+          {/* Add more lines for density */}
+          {/* Example glowing nodes */}
+          <circle cx="200" cy="350" r="6" fill="#00eaff" filter="url(#glow)" />
+          <circle cx="600" cy="300" r="7" fill="#00eaff" filter="url(#glow)" />
+          <circle cx="1000" cy="320" r="5" fill="#00eaff" filter="url(#glow)" />
+          <circle cx="800" cy="380" r="8" fill="#00eaff" filter="url(#glow)" />
+        </svg>
       </div>
-      {/* Hero Content */}
+      {/* Optional: floating dots for shimmer */}
+      <div className="absolute left-1/3 top-1/2 w-3 h-3 bg-cyan-400 rounded-full blur-md opacity-70 animate-pulse"></div>
+      <div className="absolute right-1/4 top-1/3 w-2 h-2 bg-cyan-300 rounded-full blur-sm opacity-60 animate-pulse"></div>
+      {/* Hero content overlay */}
       <div className="relative z-10 flex flex-col items-start px-20 pt-32 pb-16">
         <h1 className="text-[64px] font-semibold leading-none tracking-tight font-dm-sans mt-9 ml-7 mb-0">
           <span
@@ -25,7 +62,7 @@ export default function HeroSection() {
         <div className="flex w-full items-start mb-2">
           {/* Divider and Arrow */}
           <div className="flex-1 flex items-center mt-25">
-            <div className="h-px bg-white/60 w-full" />
+            <div className="h-px bg-white/60 w-full"></div>
             <svg className="mx-4" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <polyline points="0,8 16,16 0,24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -58,18 +95,16 @@ export default function HeroSection() {
         ].map((item, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center justify-center text-center bg-white/5 border border-white/20 rounded-2xl p-8 w-[280px] h-[200px] min-w-[260px] max-w-[300px] min-h-[200px] max-h-[240px] -mx-2"
-            style={{boxShadow: '0 2px 32px 0 rgba(31,38,135,0.10)'}}
+            className="glass-card flex flex-col items-center justify-center text-center p-8 w-[280px] h-[200px] min-w-[260px] max-w-[300px] min-h-[200px] max-h-[240px] -mx-2 backdrop-blur-xl"
           >
             <div className="font-bold text-4xl mb-3 text-white/90" style={{fontFamily: 'inherit'}}>{item.name}</div>
             <div className="text-base text-white/70 font-normal leading-snug" style={{fontFamily: 'inherit'}}>{item.text}</div>
           </div>
         ))}
       </div>
-      
       {/* Download Guide Section */}
       <div className="relative z-10 mx-24 mt-24 mb-10">
-        <div className="bg-gradient-to-r from-[#2D1B69]/40 via-[#1E3A8A]/40 to-[#0F4C75]/40 backdrop-blur-lg border border-white/20 rounded-3xl p-7 shadow-2xl">
+        <div className="glass-card p-7 backdrop-blur-xl">
           {/* Top Section - Title and Profile Image */}
           <div className="flex items-start justify-between mb-8">
             <div className="flex-1">
@@ -78,7 +113,6 @@ export default function HeroSection() {
                 2025 Your Best Marketing Year
               </h2>
             </div>
-            
             {/* Profile Image */}
             <div className="ml-8 flex items-center justify-center w-28 h-full">
               <div className="w-28 h-28 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center overflow-hidden mt-4">
@@ -88,7 +122,6 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          
           {/* Bottom Section - Email and Button */}
           <div className="flex items-center gap-6 ml-6 mb-4">
             <div className="min-w-[300px]">

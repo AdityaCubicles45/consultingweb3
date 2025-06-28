@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "@iconify/react"; // Optional: replace with real SVG icons
 
 const teamImages = [
   "/team/1.jpg",
@@ -12,90 +11,66 @@ const teamImages = [
   "/team/8.jpg",
 ];
 
-const categories = [
+const departments = [
   {
     title: "Crypto Marketing",
-    projects: 127,
-    description:
-      "Effectively promote your cryptocurrency, ICO, or blockchain offering within a complex and fast–evolving digital landscape through targeted cryptocurrency promotion.",
-    icon: "ph:currency-eth-bold",
+    projects: "127",
+    description: "Effectively promote your cryptocurrency, ICO, or blockchain offering within a complex and fast–evolving digital landscape through targeted cryptocurrency promotion.",
   },
   {
     title: "B2B Marketing",
-    projects: 36,
-                  description:
-                "Capture the attention of key decision-makers and increase your brand&apos;s visibility in the business–to–business space with our specialist expertise.",
-    icon: "ph:briefcase-bold",
+    projects: "36",
+    description: "Capture the attention of key decision-makers and increase your brand's visibility in the business–to–business space with our specialist expertise.",
   },
   {
     title: "Fintech Marketing",
-    projects: 29,
-    description:
-      "Gain a competitive edge in the financial tech sector using our strategic marketing strategies. Drive awareness, foster trust, and trigger long-term growth.",
-    icon: "ph:bank-bold",
+    projects: "29",
+    description: "Gain a competitive edge in the financial tech sector using our strategic marketing strategies. Drive awareness, foster trust, and trigger long-term growth.",
   },
   {
     title: "SaaS Marketing",
-    projects: 22,
-    description:
-      "Grow your SaaS business with a focused strategy that boosts engagement and increases customer acquisition.",
-    icon: "ph:cloud-bold",
+    projects: "22",
+    description: "Grow your SaaS business with a focused strategy that boosts engagement and increases customer acquisition.",
   },
   {
     title: "Gaming Marketing",
-    projects: 32,
-    description:
-      "Engage the gaming community and promote your product with an effective campaign designed to drive user engagement.",
-    icon: "ph:game-controller-bold",
+    projects: "32",
+    description: "Engage the gaming community and promote your product with an effective campaign designed to drive user engagement.",
   },
   {
     title: "Esports Marketing",
-    projects: 36,
-    description:
-      "Increase your reach in the competitive Esports world with a carefully planned strategy that raises brand awareness.",
-    icon: "ph:trophy-bold",
+    projects: "36",
+    description: "Increase your reach in the competitive Esports world with a carefully planned strategy that raises brand awareness.",
   },
   {
     title: "Mobile Marketing",
-    projects: 28,
-    description:
-      "Reach your target audience and promote your mobile app with a marketing roadmap that drives downloads.",
-    icon: "ph:device-mobile-bold",
+    projects: "28",
+    description: "Reach your target audience and promote your mobile app with a marketing roadmap that drives downloads.",
   },
   {
     title: "iGaming Marketing",
-    projects: 22,
-    description:
-      "Unlock the potential of your iGaming brand with sophisticated marketing techniques that engage users and drive results.",
-    icon: "ph:cards-bold",
+    projects: "22",
+    description: "Unlock the potential of your iGaming brand with sophisticated marketing techniques that engage users and drive results.",
   },
   {
     title: "Software Marketing",
-    projects: 32,
-    description:
-      "Discover how NinjaPromo can take your software company from obscurity to global reach.",
-    icon: "ph:cpu-bold",
+    projects: "32",
+    description: "Discover how NinjaPromo can take your software company from obscurity to global reach.",
   },
   {
     title: "Small Business",
-    projects: 28,
-    description:
-      "Start growing your small business with targeted digital campaigns that build relationships and drive conversions.",
-    icon: "ph:storefront-bold",
+    projects: "28",
+    description: "Start growing your small business with targeted digital campaigns that build relationships and drive conversions.",
   },
   {
     title: "Ecommerce",
-    projects: 26,
-    description:
-      "Empower and enable your eCommerce venture to achieve bigger and better things with NinjaPromo — your partner in everything digital and marketing.",
-    icon: "ph:shopping-cart-bold",
+    projects: "26",
+    description: "Empower and enable your eCommerce venture to achieve bigger and better things with NinjaPromo — your partner in everything digital and marketing.",
   },
   {
     title: "Startup Marketing",
-    projects: 28,
-    description:
-      "Get your start-up off the ground with a comprehensive digital marketing strategy designed to bring success from day one.",
-    icon: "ph:rocket-launch-bold",
+    projects: "28",
+    description: "Get your start-up off the ground with a comprehensive digital marketing strategy designed to bring success from day one.",
   },
 ];
 
@@ -103,73 +78,69 @@ export default function MarketingDepartmentSection() {
   return (
     <>
       {/* Team Section */}
-      <div className="bg-black text-white py-16 text-center px-4">
-        <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+      <div className="section-bg-gradient text-white py-16 text-center px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold leading-snug text-white">
           Get a full marketing department by <br />
           subscription in your industry
         </h2>
-        <p className="text-sm md:text-base text-gray-300 mt-4">
+        <p className="text-lg md:text-xl text-white/80 mt-6">
           All marketing services in one package <br />
           with successful experience in your niche
         </p>
 
-        <div className="flex justify-center mt-8 space-x-[-20px]">
+        <div className="flex justify-center mt-10 space-x-[-20px]">
           {teamImages.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Team member ${i + 1}`}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-black object-cover"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"
             />
           ))}
         </div>
       </div>
 
       {/* Marketing Categories Grid */}
-      <div className="bg-black text-white py-16 px-6 md:px-12">
+      <div className="section-bg-gradient text-white py-16 px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {categories.map((item, idx) => (
+          {departments.map((dept, index) => (
             <div
-              key={idx}
-              className="bg-[#111114] hover:bg-gradient-to-b hover:from-purple-50 hover:to-yellow-100 border border-[#2A2A2E] hover:border-gray-300 rounded-xl p-6 h-full flex flex-col transition-all duration-300 cursor-pointer group"
+              key={index}
+              className="glass-card hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl p-8 h-full flex flex-col transition-all duration-300 cursor-pointer group"
             >
               <div className="mb-6">
-                <Icon icon={item.icon} className="text-3xl text-white group-hover:text-black mb-6 transition-colors duration-300" />
-                <h3 className="text-xl font-semibold text-white group-hover:text-black mb-6 transition-colors duration-300">{item.title}</h3>
+                <span></span>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 transition-colors duration-300">{dept.title}</h3>
               </div>
               <div className="flex gap-3 mb-6">
-                <span className="border border-[#555] group-hover:border-black px-3 py-1 rounded text-xs font-medium text-gray-300 group-hover:text-black uppercase transition-all duration-300">
-                  Department
-                </span>
-                <span className="border border-[#555] group-hover:border-black px-3 py-1 rounded text-xs font-medium text-gray-300 group-hover:text-black uppercase transition-all duration-300">
-                  {item.projects} Projects
-                </span>
+                <span className="border border-white/20 px-3 py-1 rounded text-sm font-semibold text-white/80 uppercase transition-all duration-300">Department</span>
+                <span className="border border-white/20 px-3 py-1 rounded text-sm font-semibold text-white/80 uppercase transition-all duration-300">{dept.projects} Projects</span>
               </div>
-              <p className="text-sm text-gray-400 group-hover:text-gray-800 leading-relaxed transition-colors duration-300">{item.description}</p>
+              <p className="text-base md:text-lg text-white/80 leading-relaxed transition-colors duration-300">{dept.description}</p>
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
-          <button className="bg-gradient-to-r from-[#FF6A5F] to-[#A63FFD] hover:bg-gradient-to-l hover:from-[#FF6A5F] hover:to-[#A63FFD] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-            More cases
+          <button className="gradient-border px-8 py-3 text-white font-semibold text-lg transition-all duration-300 hover:scale-105">
+            <span className="relative z-10">More cases</span>
           </button>
         </div>
       </div>
 
       {/* Service Department Note */}
-      <div className="bg-black text-white py-20 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+      <div className="section-bg-gradient text-white py-20 px-4 text-center relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
           Or one service department which you <br /> don&apos;t have resources for
         </h2>
-        <p className="text-sm md:text-base text-gray-300 mt-4">
+        <p className="text-lg md:text-xl text-white/80 mt-6">
           We will take on all the tasks that you&apos;ve <br />
           been putting off for a long time
         </p>
       </div>
 
       {/* Department Heads */}
-      <div className="bg-black text-white py-16 px-6 md:px-12">
+      <div className="section-bg-gradient text-white py-16 px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
             {
@@ -198,139 +169,126 @@ export default function MarketingDepartmentSection() {
               name: "Paid Social",
               title: "Head of",
               description:
-                "Extend the reach of your brand through laser-focused social ads that amplify awareness and propel sales.",
+                "Drive engagement and conversions through strategic paid social campaigns that reach your target audience.",
               image: "/team/paid-social.jpg",
             },
             {
-              name: "Influencer Marketing",
+              name: "Influencer",
               title: "Head of",
               description:
-                "Turbo-boost engagement and sales with strategic influencer advertising campaigns that create a big buzz around your brand across the web.",
+                "Leverage the power of influencer partnerships to amplify your brand message and reach new audiences.",
               image: "/team/influencer.jpg",
-            },
-            {
-              name: "Email Marketing",
-              title: "Head of",
-              description:
-                "Entice customers and prospects to take specific actions using personalised messaging that promotes your brand.",
-              image: "/team/email.jpg",
             },
             {
               name: "PR",
               title: "Head of",
               description:
-                "Leverage stellar media relations expertise to boost brand exposure and positively influence public opinion.",
+                "Build your brand reputation and media presence through strategic public relations campaigns.",
               image: "/team/pr.jpg",
-            },
-            {
-              name: "Video Production",
-              title: "Head of",
-              description:
-                "Cater to the growing hunger for multimedia digital content through attention-grabbing video production.",
-              image: "/team/video-production.jpg",
             },
             {
               name: "Video Marketing",
               title: "Head of",
               description:
-                "Generate leads and drive conversions with an effective and creative video strategy that tells your brand story in a compelling way.",
+                "Create compelling video content that engages your audience and drives meaningful results.",
               image: "/team/video-marketing.jpg",
+            },
+            {
+              name: "Video Production",
+              title: "Head of",
+              description:
+                "Produce high-quality video content that tells your brand story and captivates your audience.",
+              image: "/team/video-production.jpg",
+            },
+            {
+              name: "UI/UX",
+              title: "Head of",
+              description:
+                "Design intuitive and engaging user experiences that drive conversions and user satisfaction.",
+              image: "/team/uiux.jpg",
+            },
+            {
+              name: "Community",
+              title: "Head of",
+              description:
+                "Build and nurture engaged communities around your brand to foster loyalty and advocacy.",
+              image: "/team/community.jpg",
             },
             {
               name: "Branding",
               title: "Head of",
               description:
-                "Put the spotlight on your brand and stand out from the crowd with an inspired branding campaign that generates positive PR.",
+                "Develop a strong brand identity that resonates with your audience and sets you apart from competitors.",
               image: "/team/branding.jpg",
-            },
-            {
-              name: "UI/UX Design Department",
-              title: "Head of",
-              description:
-                "Engage your audience on their favourite platforms to foster meaningful relationships that build trust.",
-              image: "/team/uiux.jpg",
-            },
-            {
-              name: "Community Management",
-              title: "Head of",
-              description:
-                "Grow your web presence and build strong, lasting relationships with your target audience through strategic community management.",
-              image: "/team/community.jpg",
             },
             {
               name: "Website Development",
               title: "Head of",
               description:
-                "Optimise the customer experience with a feature-rich and intuitive website design that drives conversions.",
+                "Create powerful, conversion-focused websites that drive results and provide exceptional user experiences.",
               image: "/team/website-development.jpg",
             },
             {
               name: "Web Design",
               title: "Head of",
               description:
-                "Create an unbeatable foundation for your digital marketing strategy with a website that is both visually stunning and highly performant.",
+                "Design beautiful, functional websites that convert visitors into customers and drive business growth.",
               image: "/team/web-design.jpg",
+            },
+            {
+              name: "Lead Generation",
+              title: "Head of",
+              description:
+                "Generate high-quality leads through targeted campaigns and strategic marketing initiatives.",
+              image: "/team/lead-generation.jpg",
+            },
+            {
+              name: "Blockchain Development",
+              title: "Head of",
+              description:
+                "Develop innovative blockchain solutions that drive your business forward in the digital economy.",
+              image: "/team/blockchain-development.jpg",
             },
             {
               name: "Mobile App Development",
               title: "Head of",
               description:
-                "Harness the power of technology by creating intuitive and user-friendly digital applications that add value to your business.",
+                "Create powerful mobile applications that engage users and drive business results.",
               image: "/team/mobile-app-development.jpg",
             },
             {
               name: "Mobile App Design",
               title: "Head of",
               description:
-                "Design and develop user-centered iOS and Android apps that set your brand apart in a saturated marketplace.",
+                "Design intuitive and engaging mobile app experiences that delight users and drive engagement.",
               image: "/team/mobile-app-design.jpg",
-            },
-            {
-              name: "Blockchain Development",
-              title: "Head of",
-              description:
-                "Harness the incredible potential of blockchain technology to acquire new revenue streams and propel your business into the future.",
-              image: "/team/blockchain-development.jpg",
             },
             {
               name: "Lead Generation",
               title: "Head of",
               description:
-                "Invigorate your marketing strategy by partnering with NinjaPromo - a lead generation marketing agency that can elevate your brand into the stratosphere.",
+                "Invigorate your marketing strategy by partnering with NinjaPromo – a lead generation marketing agency that can elevate your brand into the stratosphere.",
               image: "/team/lead-generation.jpg",
             },
-          ].map((person, idx) => (
+          ].map((item, idx) => (
             <div
               key={idx}
-              className="rounded-xl p-6 bg-black hover:bg-gradient-to-br hover:from-[#E6E0FF] hover:to-[#F8D3D3] transition-all duration-300 cursor-pointer group"
+              className={`glass-card p-8 rounded-xl transition-all duration-300 cursor-pointer group ${
+                item.highlight ? "border-2 border-white/30" : ""
+              }`}
             >
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex items-center mb-6">
                 <img
-                  src={person.image}
-                  alt={person.name}
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  src={item.image}
+                  alt={item.name}
+                  className="w-20 h-20 rounded-full object-cover mr-6"
                 />
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-gray-300 group-hover:text-gray-600 transition-colors duration-300">
-                    {person.title}
-                  </p>
-                  <h3
-                    className="text-xl font-bold mb-1 text-white group-hover:text-black transition-colors duration-300"
-                  >
-                    {person.name}
-                  </h3>
-                  <span
-                    className="inline-block text-[8px] px-1.5 py-0.5 border rounded font-medium border-white text-white group-hover:border-gray-400 group-hover:text-gray-700 transition-all duration-300"
-                  >
-                    DEPARTMENT
-                  </span>
+                <div>
+                  <p className="text-base text-white/70 font-semibold">{item.title}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">{item.name}</h3>
                 </div>
               </div>
-              <p
-                className="text-sm text-gray-400 group-hover:text-black transition-colors duration-300"
-              >
-                {person.description}
-              </p>
+              <p className="text-base md:text-lg text-white/80 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
