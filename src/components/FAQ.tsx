@@ -3,20 +3,16 @@ import React, { useState } from 'react';
 
 const faqItems = [
   {
-    question: 'How can I earn money by walking?',
-    answer: 'You can earn money by walking through various apps and platforms that reward physical activity.'
+    question: "What are your marketing specialities?",
+    answer: "We specialize in a wide range of marketing services including digital strategy, social media, paid media, SEO, influencer marketing, content creation, and more. Our team tailors solutions to your business needs for maximum impact.",
   },
   {
-    question: 'How can I sell my shoes?',
-    answer: 'You can sell your shoes through online marketplaces, social media platforms, or specialized sneaker resale apps.'
+    question: "How can my business benefit from partnering with your agency?",
+    answer: "Partnering with us gives you access to a team of experienced marketers, proven strategies, and the latest tools. We help you grow your brand, reach new audiences, and achieve measurable results efficiently and cost-effectively.",
   },
   {
-    question: 'What can I do if my shoes get worn out?',
-    answer: 'If your shoes get worn out, you can repair them, recycle them, or dispose of them properly through shoe recycling programs.'
-  },
-  {
-    question: 'How are the rarity levels of shoes determined?',
-    answer: 'Shoe rarity levels are typically determined by factors like limited production runs, exclusive collaborations, and market demand.'
+    question: "How do I determine my marketing budget?",
+    answer: "We work with you to assess your business goals, industry benchmarks, and available resources to recommend a marketing budget that aligns with your objectives and delivers the best ROI.",
   },
 ];
 
@@ -47,7 +43,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="section-bg-gradient py-16 md:py-24 px-6 relative z-10">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-white">FAQ</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-white">FAQ&apos;s</h2>
       <div className="max-w-4xl mx-auto space-y-4">
         {faqItems.map((item, index) => (
           <div key={index} className="glass-card rounded-2xl">

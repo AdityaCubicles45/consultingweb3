@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import PricingPlans from "./PricingPlans";
+import FAQ from "./FAQ";
 
 const teamImages = [
   "/team/1.jpg",
@@ -298,6 +300,8 @@ export default function MarketingDepartmentSection() {
           ))}
         </div>
       </div>
+      <PricingPlans />
+      <FAQ />
     </>
   );
 } 

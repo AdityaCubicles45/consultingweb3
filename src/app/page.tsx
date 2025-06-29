@@ -6,7 +6,6 @@ import MarketingServices from "@/components/MarketingServices";
 import CaseStudies from "@/components/CaseStudies";
 import MarketingDepartmentSection from "@/components/MarketingDepartment";
 import ScheduleMeeting from "@/components/ScheduleMeeting";
-import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import MenuModal from '@/components/MenuModal';
 
@@ -27,7 +26,6 @@ export default function Home() {
       <CaseStudies />
       <MarketingDepartmentSection />
       <ScheduleMeeting />
-      <FAQ />
       <Footer />
       <MenuModal isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </main>
