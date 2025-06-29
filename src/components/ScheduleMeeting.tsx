@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ScheduleMeeting() {
   return (
-    <section className="section-bg-gradient py-16 md:py-24 px-6 relative z-10">
+    <section id="schedule-meeting" className="section-bg-gradient py-16 md:py-24 px-6 relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="glass-card p-8 md:p-16">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-white">Schedule a meeting</h2>

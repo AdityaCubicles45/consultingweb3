@@ -19,6 +19,16 @@ const menuItems = [
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick, showMenuButton = true }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleBookIntroClick = () => {
+    const scheduleSection = document.getElementById('schedule-meeting');
+    if (scheduleSection) {
+      scheduleSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <nav
       className={`w-full flex items-center justify-between px-16 py-6 text-white font-bold text-sm tracking-wide fixed top-0 left-0 z-30 transition-colors duration-300 ${isHovered ? 'bg-black' : 'bg-transparent'}`}
@@ -51,6 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick, showMenuButton = true }) =
       {/* CTA Button and Menu Button */}
       <div className="flex items-center gap-4">
         <button
+          onClick={handleBookIntroClick}
           className="rounded-md px-6 py-2 font-semibold bg-transparent border-2 text-transparent bg-clip-text transition-all duration-300 group"
           style={{
             background: 'linear-gradient(90deg, #FF8BA7, #7F5CFF)',

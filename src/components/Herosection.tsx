@@ -1,6 +1,16 @@
 import React from 'react';
 
 export default function HeroSection() {
+  const handleBookDemoClick = () => {
+    const scheduleSection = document.getElementById('schedule-meeting');
+    if (scheduleSection) {
+      scheduleSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#0a0d16] to-[#10131e] overflow-hidden text-white font-sans">
       {/* SVG mesh overlay */}
@@ -77,7 +87,10 @@ export default function HeroSection() {
             </div>
             {/* Button */}
             <div className="w-full mt-4">
-              <button className="w-full py-4 rounded-lg text-lg font-bold text-white shadow-lg transition text-center gradient-reverse-on-hover font-dm-sans">
+              <button 
+                onClick={handleBookDemoClick}
+                className="w-full py-4 rounded-lg text-lg font-bold text-white shadow-lg transition text-center gradient-reverse-on-hover font-dm-sans"
+              >
                 Book a demo
               </button>
             </div>
