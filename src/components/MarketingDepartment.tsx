@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const teamImages = [
   "/team/1.jpg",
@@ -90,10 +91,12 @@ export default function MarketingDepartmentSection() {
 
         <div className="flex justify-center mt-10 space-x-[-20px]">
           {teamImages.map((src, i) => (
-            <img
+            <Image
               key={i}
               src={src}
               alt={`Team member ${i + 1}`}
+              width={96}
+              height={96}
               className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"
             />
           ))}
@@ -278,9 +281,11 @@ export default function MarketingDepartmentSection() {
               }`}
             >
               <div className="flex items-center mb-6">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
+                  width={80}
+                  height={80}
                   className="w-20 h-20 rounded-full object-cover mr-6"
                 />
                 <div>

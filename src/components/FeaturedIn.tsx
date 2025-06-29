@@ -12,7 +12,7 @@ export default function FeaturedIn() {
           </div>
           <div className="max-w-[550px]">
             <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed">
-              Barbarika's founders shared insights with Forbes on the strategic advantages of partnering over contracting with service providers.
+              Barbarika&apos;s founders shared insights with Forbes on the strategic advantages of partnering over contracting with service providers.
             </p>
             <button className="glass-card border border-white/20 text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-white/10 transition-all duration-300">
               Read the article
@@ -37,7 +37,7 @@ export default function FeaturedIn() {
 
           <div className="glass-card p-8 min-h-[140px]">
             <p className="text-white font-bold text-lg mb-3">Cryptopolitan</p>
-            <p className="text-white/80 text-base leading-relaxed">What's Holding Up The Next Bull Run in 2024, and What Trends Will Fuel It</p>
+            <p className="text-white/80 text-base leading-relaxed">What&apos;s Holding Up The Next Bull Run in 2024, and What Trends Will Fuel It</p>
           </div>
 
           <div className="glass-card p-8 min-h-[140px]">

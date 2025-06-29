@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const MarketingServices = () => {
   return (
@@ -61,14 +62,14 @@ const MarketingServices = () => {
         </div>
 
         <div className="flex justify-center mt-10 space-x-[-20px]">
-          <img src="/team/1.jpg" alt="Team member 1" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/2.jpg" alt="Team member 2" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/3.jpg" alt="Team member 3" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/4.jpg" alt="Team member 4" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/5.jpg" alt="Team member 5" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/6.jpg" alt="Team member 6" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/7.jpg" alt="Team member 7" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
-          <img src="/team/8.jpg" alt="Team member 8" className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/1.jpg" alt="Team member 1" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/2.jpg" alt="Team member 2" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/3.jpg" alt="Team member 3" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/4.jpg" alt="Team member 4" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/5.jpg" alt="Team member 5" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/6.jpg" alt="Team member 6" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/7.jpg" alt="Team member 7" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
+          <Image src="/team/8.jpg" alt="Team member 8" width={96} height={96} className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-[#0B0C2A] object-cover"/>
         </div>
       </div>
     </section>
